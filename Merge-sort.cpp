@@ -7,7 +7,7 @@ ll merge(ll a[],ll i,ll m , ll j){ // m is mid of indices i and j in the array, 
     if(i==j){
         return 0;
     }
-    ll inv = 0; // This variable counts the number of inversions during merging
+    ll inv = 0; // This variable counts the number of inversions during a single merging
     ll p[j-i+1] ;
     ll k=0;
     ll p1=i ,p2=m+1;
@@ -40,7 +40,7 @@ ll merge(ll a[],ll i,ll m , ll j){ // m is mid of indices i and j in the array, 
     return inv; //return number of inversions and sorted the array from indices i to j 
 }
 ll mergesort(ll ar[],ll i,ll j){
-    if(i==j)return 0;
+    if(i==j)return 0; 
     if(i<j){
         ll mid = i + (j-i)/2;
         ll a1 = mergesort(ar,i,mid);   ll a2 = mergesort(ar,mid+1,j);
