@@ -2,11 +2,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
-ll merge(ll a[],ll i,ll m , ll j){
+//This function merges the two parts arrays called recusively, by choosing the minimum of the both halves of the array
+ll merge(ll a[],ll i,ll m , ll j){ // m is mid of indices i and j in the array, where i<j
     if(i==j){
         return 0;
     }
-    ll inv = 0;
+    ll inv = 0; // This variable counts the number of inversions during merging
     ll p[j-i+1] ;
     ll k=0;
     ll p1=i ,p2=m+1;
@@ -35,9 +36,8 @@ ll merge(ll a[],ll i,ll m , ll j){
     for(ll u=0;u<j-i+1;u++){
         a[u+i] = p[u];
         
-    }
-   // free(p);
-    return inv;
+    } 
+    return inv; //return number of inversions and sorted the array from indices i to j 
 }
 ll mergesort(ll ar[],ll i,ll j){
     if(i==j)return 0;
@@ -45,12 +45,12 @@ ll mergesort(ll ar[],ll i,ll j){
         ll mid = i + (j-i)/2;
         ll a1 = mergesort(ar,i,mid);   ll a2 = mergesort(ar,mid+1,j);
         ll a =  merge(ar,i,mid,j);
-        return a + a1 + a2;
+        return a + a1 + a2; // since total number of inversion is the number of inversions in both halves of the array + along the two halves
     }
 }
 
 int main(void){
-    ios_base::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false); // for fast i/o although not needed here
     cin.tie(NULL);
     cout.tie(NULL);
     
