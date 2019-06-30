@@ -1,2 +1,2 @@
 # mergesort
-This code(C++) sorts an array , or vector by using mergesort and counts the number of inversions in the array/vector
+This code(C++) sorts an array by using mergesort algorithm and counts the number of inversions in the array.
