@@ -53,7 +53,7 @@ int main(void){
     cin.tie(NULL);
     cout.tie(NULL);
     
-   
+   // Exampl array is following ar[]
    ll ar[] = {8,4,3,2,1};
    cout<<mergesort(ar,0,4)<<"\n";
    for(ll i=0;i<5;i++)cout<<ar[i]<<" ";
