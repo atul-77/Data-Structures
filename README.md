@@ -1,2 +1,2 @@
-# Mergesort
-This code(C++) sorts an array by using mergesort algorithm and counts the number of inversions in the array.
+# Data Structures
+This repository contains some of the codes i wrote during the Data structures course.
